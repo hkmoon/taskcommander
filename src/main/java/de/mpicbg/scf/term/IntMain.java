@@ -7,9 +7,9 @@ import com.jediterm.terminal.LoggingTtyConnector;
 import com.jediterm.terminal.TtyConnector;
 import com.jediterm.terminal.ui.UIUtil;
 import com.pty4j.PtyProcess;
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.DefaultConfiguration;
 
 import javax.swing.*;
 
@@ -55,8 +55,8 @@ public class IntMain extends AbstractTerminal
 	}
 
 	public static void main(final String[] arg) {
-		BasicConfigurator.configure();
-		Logger.getRootLogger().setLevel( Level.INFO );
+		Configurator.initialize(new DefaultConfiguration());
+		Configurator.setRootLevel(Level.INFO);
 		new IntMain();
 	}
 
