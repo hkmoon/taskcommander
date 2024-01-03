@@ -1,7 +1,7 @@
 package de.mpicbg.scf;
 
 import de.mpicbg.scf.term.IntMain;
-import de.mpicbg.scf.term.IntMainFiji;
+
 import org.fife.rsta.ac.LanguageSupport;
 import org.fife.rsta.ac.LanguageSupportFactory;
 import org.fife.rsta.ac.sh.ShellLanguageSupport;

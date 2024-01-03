@@ -77,7 +77,7 @@ public class JavaMacroEditor extends Editor
 			}
 			else
 			{
-				String jar = "res/lib/ij-1.49m.jar";
+				String jar = "res/lib/ij-1.49q.jar";
 
 				if(new File(jar).exists())
 				{
@@ -209,7 +209,7 @@ public class JavaMacroEditor extends Editor
 	{
 		for(int i = 0; i < jarInfos.length; i++)
 		{
-			if(new File(jarInfos[0]).exists())
+			if(new File(jarInfos[i]).exists())
 				CompilerUtils.addClassPath( jarInfos[ i ] );
 		}
 	}
@@ -218,7 +218,7 @@ public class JavaMacroEditor extends Editor
 	{
 		for(int i = 0; i < jarInfos.length; i++)
 		{
-			if(new File(jarInfos[0]).exists())
+			if(new File(jarInfos[i]).exists())
 				jarManager.addClassFileSource( new JarLibraryInfo( new File(jarInfos[i]) ) );
 		}
 	}

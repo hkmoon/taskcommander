@@ -11,6 +11,7 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 
 /**
@@ -114,6 +115,9 @@ public class TaskCommander extends JFrame implements ActionListener
 					CompilerUtils.addClassPath( str );
 
 				CompilerUtils.addClassPath( "res/lib/SPIM_Registration-2.2.0.jar" );
+
+//				System.out.println(Arrays.asList(System.getProperty("java.class.path").split(File.pathSeparator)));
+
 			}
 			else
 			{
